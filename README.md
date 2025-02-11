@@ -6,7 +6,7 @@ A PyTorch implementation of a GPT-like language model with text preprocessing ut
 
 This project implements a transformer-based language model similar to GPT, designed for character-level text generation. It includes utilities for vocabulary generation and dataset splitting.
 
-In this example, I tested it on the fabulous book The Brothers Karamazov, downloaded from Project Gutenberg. Feel free to change the text file or even try training it on an actual dataset (like OpenWebText for example), though on larger datasets the `vocab.py` and `split.py` might not work properly.
+In this example, I tested it on the fabulous book **The Brothers Karamazov**, downloaded from **Project Gutenberg**. Feel free to change the text file or even try training it on an consacrated dataset (like OpenWebText for example), though on larger datasets the `vocab.py` and `split.py` might not work properly.
 
 ## Features
 
@@ -20,6 +20,7 @@ In this example, I tested it on the fabulous book The Brothers Karamazov, downlo
 
 - Python 3.9+
 - PyTorch
+- Jupyter Notebooks
 - CUDA (optional, for GPU acceleration, **on Windows**)
 
 ## Project Structure
@@ -29,6 +30,8 @@ In this example, I tested it on the fabulous book The Brothers Karamazov, downlo
 - `GPT.ipynb` - Main model implementation and training
 
 ## Usage
+
+### 1. Initialization
 
 ### INITIALIZATION STEPS FOR **MAC OS**
 
@@ -53,13 +56,13 @@ Install [Python](https://www.python.org/downloads/) on your system. If you have 
 
 Install [Anaconda](https://www.anaconda.com/download). Follow the steps from this link.
 
-Once installed, open **Anaconda Prompt**.
+Once installed, run **Anaconda Prompt** in a directory of choice.
 
 Create a _Python Virtual Environment_ and _activate_ it:
 
 ```bash
-python3 -m venv cuda
-cuda\Scripts\activate
+python3 -m venv venv
+venv\Scripts\activate
 ```
 
 Install the _Windows requirements_:
@@ -68,7 +71,7 @@ Install the _Windows requirements_:
 pip3 install -r requirements_windows.txt
 ```
 
-### ! These requirements are different. On Windows, PyTorch is installed with _CUDA_ support
+### ! These requirements are different. On Windows, PyTorch is installed with _CUDA_ support, if available
 
 ### 2. Prepare Your Data
 
@@ -92,7 +95,7 @@ Install a _new kernel_ to use in your Jupyter Notebook:
 python3 -m ipykernel install --user --name=venv --display-name "GPTKernel"
 ```
 
-Run Jupyter Notebook:
+Run _Jupyter Notebook_:
 
 ```bash
 jupyter notebook
