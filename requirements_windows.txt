@@ -1,0 +1,5 @@
+jupyter
+notebook
+numpy
+torch --index-url https://download.pytorch.org/whl/cu126
+ipykernel
